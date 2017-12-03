@@ -40,4 +40,10 @@ class LeaguesViewController: UIViewController {
         btnNext.isEnabled = true
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let skillsViewController = segue.destination as? SkillsViewController {
+            skillsViewController.player = player
+        }
+    }
+    
 }
